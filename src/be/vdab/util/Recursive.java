@@ -23,10 +23,10 @@ public class Recursive {
         else return x * macht(x,y - 1);
     }
 
-    public static double gcd(int x, int y) {
+    public static double ggd(int x, int y) {
         if (x == y) return x;
-        else if (x < y ) return gcd(x,y-x);
-        else return gcd(x - y, x);
+        else if (x < y ) return ggd(x,y-x);
+        else return ggd(x - y, x);
     }
 
 
