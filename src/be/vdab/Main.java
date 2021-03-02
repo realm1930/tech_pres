@@ -27,7 +27,7 @@ public class Main {
         System.out.print("machten van 2: ");
         System.out.println(
                 integerList.stream()
-                        .map(n -> Recursive.macht(2.0,n))
+                        .map(n -> (int)Recursive.macht(2.0,n))
                         .map(Object::toString)
                         .collect(Collectors.joining(", "))
         );
