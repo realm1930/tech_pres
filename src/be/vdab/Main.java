@@ -3,6 +3,7 @@ package be.vdab;
 
 import be.vdab.util.Recursive;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 /**
  * @author Arne Van Eycken
@@ -23,10 +24,15 @@ public class Main {
 
         var integerList = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
-        System.out.println("machten van 2: ");
-        integerList.stream()
-                   .map(n -> Recursive.macht(2.0,n))
-                   .forEach(System.out::println);
+        System.out.print("machten van 2: ");
+        System.out.println(
+                integerList.stream()
+                        .map(n -> Recursive.macht(2.0,n))
+                        .map(Object::toString)
+                        .collect(Collectors.joining(", "))
+        );
+
+
 
     }
 
