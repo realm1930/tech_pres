@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println("2^-3 = "+Recursive.macht(2.0,-3));
 
-        System.out.println("GGD van 260 en 91: "+Recursive.ggd(125.25,65.25));
+        System.out.println("GGD van 125.25 en 6.25: "+Recursive.ggd(125.25,65.25));
 
         var integerList = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
