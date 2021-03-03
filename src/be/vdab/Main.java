@@ -20,8 +20,6 @@ public class Main {
 
         System.out.println("4e fib cijfer: "+Recursive.fib(4));
 
-        System.out.println("4e fib cijfer: "+Recursive.fib(-4));
-
         System.out.println("-2^6 = "+Recursive.macht(-2.0,6));
 
         System.out.println("-2^7 = "+Recursive.macht(-2.0,7));
