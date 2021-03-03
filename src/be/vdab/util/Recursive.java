@@ -13,12 +13,12 @@ public class Recursive {
      * @param n een natuurlijk getal
      * @return n!
      * */
-    public static int faculteit(int n){
+    public static long faculteit(long n){
         if (n == 0) return 1;
         if (n < 0) return -faculteitRec(Math.abs(n));
         else return faculteitRec(n);
     }
-    private static int faculteitRec(int n) {
+    private static long faculteitRec(long n) {
         if (n == 0) return 1;
         else return n * faculteitRec(n - 1);
     }
