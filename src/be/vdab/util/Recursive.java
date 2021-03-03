@@ -40,7 +40,7 @@ public class Recursive {
         if (y == 0) return 1.0;
         double base;
         if (y % 2 == 0) base = machtRec(Math.abs(x),Math.abs(y));
-        base = machtRec(x,Math.abs(y));
+        else base = machtRec(x,Math.abs(y));
         if (y < 0) return 1/base;
         return base;
 
