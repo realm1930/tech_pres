@@ -18,9 +18,9 @@ public class Main {
 
         System.out.println("4e fib cijfer: "+Recursive.fib(4));
 
-        System.out.println("2^15 = "+Recursive.macht(2.0,15));
+        System.out.println("2^15 = "+Recursive.macht(-2.0,5));
 
-        System.out.println("GGD van 260 en 91: "+Recursive.ggd(260,91));
+        System.out.println("GGD van 260 en 91: "+Recursive.ggd(125.25,65.25));
 
         var integerList = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
