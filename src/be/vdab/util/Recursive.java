@@ -33,12 +33,17 @@ public class Recursive {
      * Recursieve functie die een decimaal getal en zijn exponent als parameters meekrijgt
      * en het eerste getal tot de macht van het tweede getal berekend.
      * @param x een rationaal getal
-     * @param y een natuurlijk positief getal, de exponent
+     * @param y een natuurlijk getal, de exponent
      * @return x tot de macht y
      * */
     public static double macht(double x, int y){
-        if (y % 2 == 0) return machtRec(Math.abs(x),y);
-        else return machtRec(x,y);
+        if (y == 0) return 1.0;
+        double base;
+        if (y % 2 == 0) base = machtRec(Math.abs(x),Math.abs(y));
+        base = machtRec(x,Math.abs(y));
+        if (y < 0) return 1/base;
+        return base;
+
     }
     private static double machtRec(double x, int y) {
         if (y == 0) return 1.0;
