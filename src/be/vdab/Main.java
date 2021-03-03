@@ -18,7 +18,9 @@ public class Main {
 
         System.out.println("4e fib cijfer: "+Recursive.fib(4));
 
-        System.out.println("2^15 = "+Recursive.macht(-2.0,5));
+        System.out.println("-2^6 = "+Recursive.macht(-2.0,6));
+
+        System.out.println("-2^7 = "+Recursive.macht(-2.0,7));
 
         System.out.println("GGD van 260 en 91: "+Recursive.ggd(125.25,65.25));
 
