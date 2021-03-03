@@ -31,7 +31,12 @@ public class Recursive {
      * */
     public static long fib(long n) {
         if ((n == 0) || (n == 1)) return n;
-        else return fib(n - 1) + fib(n - 2);
+        else if (n < 0) return -fibRec(Math.abs(n));
+        else return fibRec(n);
+    }
+    private static long fibRec(long n) {
+        if ((n == 0) || (n == 1)) return n;
+        else return fibRec(n - 1) + fibRec(n - 2);
     }
 
     /**
@@ -67,6 +72,4 @@ public class Recursive {
         else if (x < y ) return ggd(x,y - x);
         else return ggd(x - y, x);
     }
-
-
 }
