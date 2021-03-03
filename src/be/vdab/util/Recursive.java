@@ -10,12 +10,17 @@ public class Recursive {
 
     /**
      * Recursieve functie die de faculteit van een natuurlijk getal berekend.
-     * @param n een natuurlijk positief getal
+     * @param n een natuurlijk getal
      * @return n!
      * */
-    public static int faculteit(int n) {
+    public static int faculteit(int n){
         if (n == 0) return 1;
-        else return n * faculteit(n - 1);
+        if (n < 0) return -faculteitRec(Math.abs(n));
+        else return faculteitRec(n);
+    }
+    private static int faculteitRec(int n) {
+        if (n == 0) return 1;
+        else return n * faculteitRec(n - 1);
     }
 
     /**

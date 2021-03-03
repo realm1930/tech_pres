@@ -14,7 +14,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("5! = "+Recursive.faculteit(5));
+        System.out.println("-5! = "+Recursive.faculteit(-5));
+
+        System.out.println("7! = "+Recursive.faculteit(7));
 
         System.out.println("4e fib cijfer: "+Recursive.fib(4));
 
