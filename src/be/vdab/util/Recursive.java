@@ -62,6 +62,7 @@ public class Recursive {
         else baseValue = machtRec(x,Math.abs(y));
         //negatieve exponent
         if (y < 0) return 1/baseValue;
+        //positieve exponent
         return baseValue;
     }
     private static double machtRec(double x, int y) {
