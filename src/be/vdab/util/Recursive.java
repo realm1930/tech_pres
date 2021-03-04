@@ -13,17 +13,13 @@ public class Recursive {
      * @param n een natuurlijk getal
      * @return n!
      * */
-    public static long faculteit(long n){
-        if (n == 0) return 1;
-        //negatieve invoer
-        if (n < 0) return -faculteitRec(Math.abs(n));
-        //positieve invoer
-        else return faculteitRec(n);
-    }
-    private static long faculteitRec(long n) {
+
+    public static long faculteit(long n) {
+        //validatie negatieve waarde
+        if (n < 0) throw new IllegalArgumentException("Een faculteit van een negatief getal bestaat niet.");
         //basisvoorwaarde
         if (n == 0) return 1;
-        else return n * faculteitRec(n - 1);
+        else return n * faculteit(n - 1);
     }
 
     /**
