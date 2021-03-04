@@ -16,6 +16,12 @@ public class Main {
 
         System.out.println("7! = "+Recursive.faculteit(7) + "\n");
 
+        try{
+            System.out.println(Recursive.faculteit(-7));
+        } catch (IllegalArgumentException e){
+        System.out.println("Error: " + e.getMessage());
+        }
+
         System.out.println("4e fib cijfer: "+Recursive.fib(4) + "\n");
 
         System.out.println("-2^6 = "+Recursive.macht(-2.0,6));
