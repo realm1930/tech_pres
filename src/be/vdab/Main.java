@@ -24,7 +24,7 @@ public class Main {
 
         System.out.println("-2^7 = "+Recursive.macht(-2.0,7));
 
-        System.out.println("2^-3 = "+Recursive.macht(-2.0,-3) + "\n");
+        System.out.println("-2^-3 = "+Recursive.macht(-2.0,-3) + "\n");
 
         System.out.println("GGD van 125.25 en 6.25: "+Recursive.ggd(125.25,65.25) + "\n");
 
