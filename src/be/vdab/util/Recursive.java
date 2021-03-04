@@ -56,9 +56,9 @@ public class Recursive {
         if (y == 0) return 1.0;
         double baseValue;
         boolean exponentIsEven = y%2==0;
-        //positieve exponent + even
+        //even exponent
         if (exponentIsEven) baseValue = machtRec(Math.abs(x),Math.abs(y));
-        //positieve exponent + oneven
+        //oneven exponent
         else baseValue = machtRec(x,Math.abs(y));
         //negatieve exponent
         if (y < 0) return 1/baseValue;
