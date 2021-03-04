@@ -15,10 +15,13 @@ public class Recursive {
      * */
     public static long faculteit(long n){
         if (n == 0) return 1;
+        //negatieve invoer
         if (n < 0) return -faculteitRec(Math.abs(n));
+        //positieve invoer
         else return faculteitRec(n);
     }
     private static long faculteitRec(long n) {
+        //basisvoorwaarde
         if (n == 0) return 1;
         else return n * faculteitRec(n - 1);
     }
@@ -31,10 +34,13 @@ public class Recursive {
      * */
     public static long fib(long n) {
         if ((n == 0) || (n == 1)) return n;
+        //negatieve invoer
         else if (n < 0) return -fibRec(Math.abs(n));
+        //positieve invoer
         else return fibRec(n);
     }
     private static long fibRec(long n) {
+        //basisvoorwaarde
         if ((n == 0) || (n == 1)) return n;
         else return fibRec(n - 1) + fibRec(n - 2);
     }
@@ -48,14 +54,18 @@ public class Recursive {
      * */
     public static double macht(double x, int y){
         if (y == 0) return 1.0;
-        double base;
-        if (y % 2 == 0) base = machtRec(Math.abs(x),Math.abs(y));
-        else base = machtRec(x,Math.abs(y));
-        if (y < 0) return 1/base;
-        return base;
-
+        double baseValue;
+        boolean exponentIsEven = y%2==0;
+        //positieve exponent + even
+        if (exponentIsEven) baseValue = machtRec(Math.abs(x),Math.abs(y));
+        //positieve exponent + oneven
+        else baseValue = machtRec(x,Math.abs(y));
+        //negatieve exponent
+        if (y < 0) return 1/baseValue;
+        return baseValue;
     }
     private static double machtRec(double x, int y) {
+        //basisvoorwaarde
         if (y == 0) return 1.0;
         else if (y % 2 == 0) return machtRec(x * x,y / 2);
         else return x * machtRec(x,y - 1);
@@ -68,6 +78,7 @@ public class Recursive {
      * @return Grootste gemende deler van x en y
      * */
     public static double ggd(double x, double y) {
+        //basisvoorwaarde
         if (x == y) return x;
         else if (x < y ) return ggd(x,y - x);
         else return ggd(x - y, x);
