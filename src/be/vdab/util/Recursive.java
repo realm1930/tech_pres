@@ -44,29 +44,30 @@ public class Recursive {
     /**
      * Recursieve functie die een decimaal getal en zijn exponent als parameters meekrijgt
      * en het eerste getal tot de macht van het tweede getal berekend.
-     * @param x een rationaal getal
-     * @param y een natuurlijk getal, de exponent
+     * @param n een rationaal getal
+     * @param exponent een natuurlijk getal, de exponent
      * @return x tot de macht y
      * */
-    public static double macht(double x, int y){
-        if (y == 0) return 1.0;
+    public static double macht(double n, int exponent){
+        if (exponent == 0) return 1.0;
         double baseValue;
-        boolean exponentIsEven = y%2==0;
         //even exponent
-        if (exponentIsEven) baseValue = machtRec(Math.abs(x),Math.abs(y));
+        if (isEven(exponent)) baseValue = machtRec(Math.abs(n),Math.abs(exponent));
         //oneven exponent
-        else baseValue = machtRec(x,Math.abs(y));
+        else baseValue = machtRec(n,Math.abs(exponent));
         //negatieve exponent
-        if (y < 0) return 1/baseValue;
+        if (exponent < 0) return 1/baseValue;
         //positieve exponent
         return baseValue;
     }
-    private static double machtRec(double x, int y) {
-        boolean exponentIsEven = y%2==0;
+    private static double machtRec(double x, int exponent) {
         //basisvoorwaarde
-        if (y == 0) return 1.0;
-        else if (exponentIsEven) return machtRec(x * x,y / 2);
-        else return x * machtRec(x,y - 1);
+        if (exponent == 0) return 1.0;
+        else if (isEven(exponent)) return machtRec(x * x,exponent / 2);
+        else return x * machtRec(x,exponent - 1);
+    }
+    private static boolean isEven(int y){
+        return y%2==0;
     }
 
     /**
