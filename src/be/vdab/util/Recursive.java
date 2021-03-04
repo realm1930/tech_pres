@@ -66,9 +66,10 @@ public class Recursive {
         return baseValue;
     }
     private static double machtRec(double x, int y) {
+        boolean exponentIsEven = y%2==0;
         //basisvoorwaarde
         if (y == 0) return 1.0;
-        else if (y % 2 == 0) return machtRec(x * x,y / 2);
+        else if (exponentIsEven) return machtRec(x * x,y / 2);
         else return x * machtRec(x,y - 1);
     }
 
